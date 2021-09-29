@@ -1,0 +1,1 @@
+//in case of different table we have to make their model as well as routes
