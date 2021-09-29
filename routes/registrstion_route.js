@@ -60,11 +60,11 @@ router.post('/bloodbank/client/register',[
 })
 
 router.post('/bloodbank/client/login',function(req,res){
-    const username = req.body.username; //from form/client
+    const email = req.body.email; //from form/client
     const password = req.body.password; //from client//client
 console.log(req.body);
 //check username is valid or not
-    Registration.findOne({username:username})
+    Registration.findOne({email:email})
     .then(function(userdata){
         if(userdata===null){
             //if user didn't find in database
